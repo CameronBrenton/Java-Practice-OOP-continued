@@ -38,7 +38,35 @@ public class MyCircle {
 	}
 
 	public void setCenterX(int x){
-		int centerX = center.getX();
-		this.centerX = x;
+		this.center.setX(x);
+	}
+
+	public int getCenterY(){
+		return center.getY();
+	}
+
+	public void setCenterY(int y){
+		this.center.setY(y);
+	}
+
+	public void setCenterXY(int x, int y){
+		this.center.setX(x);
+		this.center.setY(y);
+	}
+
+	public String toString(){
+		return "MyCircle[radius = " + radius + ", center = " + MyPoint + "]";
+	}
+
+	public int getArea(){
+		return x * y;
+	}
+
+	public double getCircumference(){
+		return 2*(3.14*radius);
+	}
+
+	public double distance(MyCircle myCircle){
+		return center.distance(myCircle.center);
 	}
 }

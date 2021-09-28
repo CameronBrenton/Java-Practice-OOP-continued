@@ -40,7 +40,7 @@ public class MyPoint {
 	}
 
 	public String toString(){
-		return "(The value of x is = " + x + ", and the value of y = " + y + ")";
+		return "(x = " + x + ", y = " + y + ")";
 	}
 
 	public double distance(int x, int y){
@@ -61,7 +61,6 @@ public class MyPoint {
 		int differenceOfY = this.y - 0;
 		return Math.sqrt(differenceOfX*differenceOfX + differenceOfY*differenceOfY);
 	}
-
 
 
 }
