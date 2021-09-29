@@ -1,9 +1,7 @@
-package com.keyin;
 
 public class MyCircle {
 	private MyPoint center = new MyPoint();
 	private int radius = 1;
-	private Object MyPoint;
 
 	public MyCircle(){
 		center = new MyPoint(0,0);
@@ -17,6 +15,7 @@ public class MyCircle {
 
 	public MyCircle(MyPoint center, int radius){
 		this.center = center;
+		this.radius = radius;
 	}
 
 	public int getRadius(){
@@ -57,7 +56,7 @@ public class MyCircle {
 	}
 
 	public String toString(){
-		return "MyCircle[radius = " + radius + ", center = " + MyPoint + "]";
+		return "MyCircle[radius = " + radius + ", center = " + center + "]";
 	}
 
 	public int getArea(){

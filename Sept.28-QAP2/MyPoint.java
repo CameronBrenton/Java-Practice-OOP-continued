@@ -1,4 +1,3 @@
-package com.keyin;
 
 public class MyPoint {
 	private int x = 0;
