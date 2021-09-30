@@ -32,24 +32,65 @@ public class Money {
 		}
 		else if(this.dollars == moneyDollars){
 			if(this.cents > money.cents){
-				double difference = 0;
+				double difference;
 				difference = (double)(this.cents) - (double)(moneyCents);
 				return difference;
 			}
 			else{
-				return (double)(moneyCents) - (double)(this.cents);
+				double difference;
+				difference = (double)(moneyCents) - (double)(this.cents);
+				return difference;
 			}
 		}
 		else if(this.dollars > moneyDollars){
 			if(this.cents > moneyCents){
-				return (double)(this.cents) - (double)(moneyCents);
+				double difference;
+				difference = (double)(this.cents) - (double)(moneyCents);
+				difference += this.dollars - moneyDollars;
+				return difference;
 			}
-			else{
-				return (double)(moneyCents) - (double)(this.cents);
+			else if(this.cents < moneyCents){
+				double difference;
+				difference = (double)(moneyCents) - (double)(this.cents);
+				difference += this.dollars - moneyDollars;
+				return difference;
+			}
+			else if(this.cents == moneyCents){
+				double difference = 0;
+				difference += this.dollars - moneyDollars;
+				return difference;
+			}
+		}
+		else if(this.dollars < moneyDollars){
+			if(this.cents > moneyCents){
+				double difference;
+				difference = (double)(this.cents) - (double)(moneyCents);
+				difference += moneyDollars - this.dollars;
+				return difference;
+			}
+			else if(this.cents < moneyCents){
+				double difference;
+				difference = (double)(moneyCents) - (double)(this.cents);
+				difference += moneyDollars - this.dollars;
+				return difference;
+			}
+			else if(this.cents == moneyCents){
+				double difference = 0;
+				difference += this.dollars - moneyDollars;
+				return difference;
 			}
 		}
 		return 0;
 		
+	}
+
+	public boolean equals(Money money){
+		if(this.dollars == money.dollars && this.cents == money.cents){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	public String toString(){
