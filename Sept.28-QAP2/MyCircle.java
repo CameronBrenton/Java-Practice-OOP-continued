@@ -59,8 +59,8 @@ public class MyCircle {
 		return "MyCircle[radius = " + radius + ", center = " + center + "]";
 	}
 
-	public int getArea(){
-		return x * y;
+	public double getArea(){
+		return 3.14*(radius * 2);
 	}
 
 	public double getCircumference(){
