@@ -25,6 +25,13 @@ public class TestCreditCard {
 		Money money7 = new Money(money6);
 		System.out.println("Overloaded the money7 constructer with the money6 object and the equals() method returns:" + money6.equals(money7));
 
+		Money money8 = new Money(250.75);
+		Money money9 = new Money(57.30);
+
+		money8.add(money9);
+		System.out.println("Testing the add() method.   250.75 + 57.30 should equal 308.05" + money8.toString());
+
+
 
 	}
 	
