@@ -15,9 +15,16 @@ public class TestCreditCard {
 		money1.subtract(money3);
 		System.out.println("The value of money1 after subtracting $11.11 is: " + money1.toString());
 
-		Money money4 = new Money(10.00);
-		Money money5 = new Money(10.50);
-		System.out.println(money4.compareTo(money5));
+		Money money4 = new Money(400.60);
+		Money money5 = new Money(350.20);
+		System.out.println("Compare Method: " + money4.compareTo(money5));
+		System.out.println(money5.equals(money4));
+		System.out.println(money5.equals(money4));
+
+		Money money6 = new Money(100.80);
+		Money money7 = new Money(money6);
+		System.out.println("Overloaded the money7 constructer with the money6 object and the equals() method returns:" + money6.equals(money7));
+
 
 	}
 	
