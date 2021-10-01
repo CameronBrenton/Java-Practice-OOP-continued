@@ -17,6 +17,10 @@ public class Money {
 	public void add(Money money){
 		this.dollars += money.dollars;
 		this.cents += money.cents;
+		if(this.cents > 99){
+			this.dollars += 1;
+			this.cents = this.cents % 100;
+		}
 	}
 
 	public void subtract(Money money){
