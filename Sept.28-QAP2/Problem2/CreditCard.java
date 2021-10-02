@@ -8,6 +8,15 @@ public class CreditCard {
 	public CreditCard(Person newCardHolder, Money limit){
 		balance = new Money(0);
 		creditLimit = new Money(0);
+		creditLimit = limit;
+		owner = newCardHolder;
+	}
 
+	public Money getBalance(){
+		return balance;
+	}
+
+	public Money getCreditLimit(){
+		return creditLimit;
 	}
 }
