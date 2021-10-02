@@ -32,10 +32,27 @@ public class Money {
 		}
 	}
 	
-	public double compareTo(Money money){
+	public int compareTo(Money money){
 		double moneyDollars = (double) (Math.floor(money.dollars));
 		double moneyCents = (double) (Math.floor(money.cents));
+
+
+		//CChecking to see if the balance(this.dollars & this.cents) is exceeded by the given amount.
 		if (this.dollars == moneyDollars && this.cents == moneyCents){
+			return 0;
+		}
+		else if(this.dollars >= moneyDollars && this.cents >= moneyCents){
+			return 1;
+		}
+		else if(this.dollars < moneyDollars){
+			return -1;
+		}
+		else{
+			return 0;
+		}
+		
+		
+		/*if (this.dollars == moneyDollars && this.cents == moneyCents){
 			return 0;
 		}
 		else if(this.dollars == moneyDollars){
@@ -88,7 +105,7 @@ public class Money {
 				return difference;
 			}
 		}
-		return 0;
+		return 0;*/
 		
 	}
 
