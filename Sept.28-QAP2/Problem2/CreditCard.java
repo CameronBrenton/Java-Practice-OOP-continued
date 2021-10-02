@@ -21,7 +21,7 @@ public class CreditCard {
 	}
 
 	public String getPersonals(){
-		return owner;
+		return owner.toString();
 	}
 
 	public void charge(Money amount){
@@ -32,5 +32,9 @@ public class CreditCard {
 		else{
 			System.out.println("Oops! Cannot exceed credit limit!");
 		}
+	}
+
+	public void payment(Money amount){
+		balance.subtract(amount);
 	}
 }
