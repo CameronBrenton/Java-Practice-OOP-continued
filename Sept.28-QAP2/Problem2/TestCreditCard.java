@@ -7,6 +7,9 @@ public class TestCreditCard {
 
 		System.out.println("This is the contents of the money object: " + money1.toString());
 
+		Address address1 = new Address("15 Pleasant St.", "Toronto", "Ontario", "Y8N 2F5");
+		System.out.println("This is the contents of the new address object" + address1.toString());
+
 		Money money2 = new Money(23.00);
 		money1.add(money2);
 		System.out.println("The value of money1 after adding $23 is: " + money1.toString());
@@ -30,6 +33,10 @@ public class TestCreditCard {
 
 		money8.add(money9);
 		System.out.println("Testing the add() method.   250.75 + 57.30 should equal 308.05" + money8.toString());
+
+
+		money8.subtract(money9);
+		System.out.println("Testing the subtract method() by subtracting money9 from money8: " + money8);
 
 
 
