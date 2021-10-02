@@ -13,7 +13,7 @@ public class Address {
 		this.zip = zip;
 	}
 
-	toString(){
-		return "Address[" + street + ", " + city + ", " + state + ", " + zip;
+	public String toString(){
+		return "Address[" + street + ", " + city + ", " + state + ", " + zip + "]";
 	}
 }
