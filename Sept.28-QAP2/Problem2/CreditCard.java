@@ -19,4 +19,18 @@ public class CreditCard {
 	public Money getCreditLimit(){
 		return creditLimit;
 	}
+
+	public String getPersonals(){
+		return owner;
+	}
+
+	public void charge(Money amount){
+		balance.add(amount);
+		if(balance.compareTo(amount)){
+			balance.subtract(amount);
+		}
+		else{
+			System.out.println("Oops! Cannot exceed credit limit!");
+		}
+	}
 }
