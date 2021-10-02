@@ -26,6 +26,10 @@ public class Money {
 	public void subtract(Money money){
 		this.dollars -= money.dollars;
 		this.cents -= money.cents;
+		if(this.cents < 0){
+			this.dollars -=1;
+			this.cents = this.cents + 100;
+		}
 	}
 	
 	public double compareTo(Money money){
