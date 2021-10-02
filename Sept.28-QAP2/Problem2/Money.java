@@ -37,7 +37,7 @@ public class Money {
 		double moneyCents = (double) (Math.floor(money.cents));
 
 
-		//CChecking to see if the balance(this.dollars & this.cents) is exceeded by the given amount.
+		//Checking to see if the balance(this.dollars & this.cents) is exceeded by the given amount.
 		if (this.dollars == moneyDollars && this.cents == moneyCents){
 			return 0;
 		}
@@ -57,50 +57,50 @@ public class Money {
 		}
 		else if(this.dollars == moneyDollars){
 			if(this.cents > money.cents){
-				double difference;
+				Money difference = new Money(0);
 				difference = (this.cents * .01) - (moneyCents * .01);
 				return difference;
 			}
 			else{
-				double difference;
+				Money difference = new Money(0);
 				difference = (moneyCents * .01) - (this.cents * .01);
 				return difference;
 			}
 		}
 		else if(this.dollars > moneyDollars){
 			if(this.cents > moneyCents){
-				double difference;
+				Money difference = new Money(0);
 				difference = (this.cents * .01) - (moneyCents * .01);
 				difference += this.dollars - moneyDollars;
 				return difference;
 			}
 			else if(this.cents < moneyCents){
-				double difference;
+				Money difference = new Money(0);
 				difference = (moneyCents * .01) - (this.cents * .01);
 				difference += this.dollars - moneyDollars;
 				return difference;
 			}
 			else if(this.cents == moneyCents){
-				double difference = 0;
+				Money difference = new Money(0);
 				difference += this.dollars - moneyDollars;
 				return difference;
 			}
 		}
 		else if(this.dollars < moneyDollars){
 			if(this.cents > moneyCents){
-				double difference;
+				Money difference = new Money(0);
 				difference = (this.cents * .01) - (moneyCents * .01);
 				difference += moneyDollars - this.dollars;
 				return difference;
 			}
 			else if(this.cents < moneyCents){
-				double difference;
+				Money difference = new Money(0);
 				difference = (moneyCents * .01) - (this.cents * .01);
 				difference += moneyDollars - this.dollars;
 				return difference;
 			}
 			else if(this.cents == moneyCents){
-				double difference = 0;
+				Money difference = new Money(0);
 				difference += this.dollars - moneyDollars;
 				return difference;
 			}
@@ -119,6 +119,6 @@ public class Money {
 	}
 
 	public String toString(){
-		return "Money[dollars = " + dollars + ", cents = " + cents + "]";
+		return "$" + dollars + "." + cents;
 	}
 }
