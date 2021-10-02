@@ -26,11 +26,9 @@ public class CreditCard {
 
 	public void charge(Money amount){
 		balance.add(amount);
-		if(balance.compareTo(amount)){
+		if(balance.compareTo(creditLimit) == 1){
 			balance.subtract(amount);
-		}
-		else{
-			System.out.println("Oops! Cannot exceed credit limit!");
+			System.out.println("Oops! Cannot exceed credit limit! The charge was reversed.");
 		}
 	}
 
