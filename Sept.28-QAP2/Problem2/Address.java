@@ -17,7 +17,7 @@ public class Address {
 		this.zip = zip;
 	}
 
-	// toString() method
+	// Print the Address object's street, city, state, and zip information
 	public String toString(){
 		return "Address[" + street + ", " + city + ", " + state + ", " + zip + "]";
 	}
