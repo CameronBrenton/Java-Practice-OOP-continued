@@ -3,16 +3,17 @@
 package Problem2;
 
 public class Money {
+	//Class variables
 	private long dollars;
 	private long cents;
 
-	//Constructor
+	// Money Parameterized Constructor
 	public Money(double amount){
 		dollars = (long)(Math.floor(amount));
 		cents = (long)((amount - dollars) * 100);
 	}
 
-	//Copy Constructor
+	// Money Copy Constructor
 	public Money(Money money){
 		dollars = money.dollars;
 		cents = money.cents;
