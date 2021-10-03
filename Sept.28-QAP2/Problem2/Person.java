@@ -3,6 +3,7 @@
 package Problem2;
 
 public class Person {
+	// Class variables
 	private String lastName;
 	private String firstName;
 	private Address home;
