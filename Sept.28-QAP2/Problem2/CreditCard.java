@@ -26,11 +26,6 @@ public class CreditCard {
 		return creditLimit;
 	}
 
-	// toString() method 
-	public String getPersonals(){
-		return owner.toString();
-	}
-
 	// This method adds the charge to the card using the money class's add() method. 
 	// We use an if statement to check if the credit limit is exceeded and if it is, then reverse the charge using the money class's
 	// subtract() method. We then print a message notifiying the user that the charge was revered because the credit limit was exceeded.
@@ -45,5 +40,11 @@ public class CreditCard {
 	// We can make a payment on our account by using the money class's subtract method() on the balance.
 	public void payment(Money amount){
 		balance.subtract(amount);
+	}
+
+	// Print the credit card's owner's information using the Person.toString() method. This will return the info
+	// fist name, last name, and home address.
+	public String getPersonals(){
+		return owner.toString();
 	}
 }
