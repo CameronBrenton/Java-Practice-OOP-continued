@@ -129,7 +129,7 @@ public class Money {
 		}
 	}
 
-	// toString() method.
+	// Print the Money object's dollar and cent value preceeded by a $ sign.
 	public String toString(){
 		return "$" + dollars + "." + cents;
 	}
