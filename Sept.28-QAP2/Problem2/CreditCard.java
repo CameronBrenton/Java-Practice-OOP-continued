@@ -43,7 +43,7 @@ public class CreditCard {
 	}
 
 	// Print the credit card's owner's information using the Person.toString() method. This will return the info
-	// fist name, last name, and home address.
+	// last name, fist name, and home address.
 	public String getPersonals(){
 		return owner.toString();
 	}
