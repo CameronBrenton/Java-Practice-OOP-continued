@@ -1,19 +1,24 @@
+//This is the Money Class
+
 package Problem2;
 
 public class Money {
 	private long dollars;
 	private long cents;
 
+	//Constructor
 	public Money(double amount){
 		dollars = (long)(Math.floor(amount));
 		cents = (long)((amount - dollars) * 100);
 	}
 
+	//Copy Constructor
 	public Money(Money money){
 		dollars = money.dollars;
 		cents = money.cents;
 	}
 
+	//Used in the Credit Card class's charge() method to add a charge to the card
 	public void add(Money money){
 		this.dollars += money.dollars;
 		this.cents += money.cents;
@@ -23,6 +28,8 @@ public class Money {
 		}
 	}
 
+	// Used in the Credit Card class's charge() method to reverse a charge. 
+	// It's also used in the payment method() to subtract from the balance.
 	public void subtract(Money money){
 		this.dollars -= money.dollars;
 		this.cents -= money.cents;
@@ -32,12 +39,12 @@ public class Money {
 		}
 	}
 	
+	//Checking to see if the balance(this.dollars & this.cents) is exceeded by the given amount.
+	// Will be used to make sure balance doesn't exceed the credit limit.
 	public int compareTo(Money money){
 		double moneyDollars = (double) (Math.floor(money.dollars));
 		double moneyCents = (double) (Math.floor(money.cents));
 
-
-		//Checking to see if the balance(this.dollars & this.cents) is exceeded by the given amount.
 		if (this.dollars == moneyDollars && this.cents == moneyCents){
 			return 0;
 		}
@@ -51,7 +58,9 @@ public class Money {
 			return 0;
 		}
 		
-		
+		// This is the old code I had for the compareTo() method but then later realized it wasn't what I needed for the problem.
+		// I wanted to keep it here but commented out just to show my work.
+		//
 		/*if (this.dollars == moneyDollars && this.cents == moneyCents){
 			return 0;
 		}
@@ -109,6 +118,7 @@ public class Money {
 		
 	}
 
+	// A method used to check if two money objects are exactly the same in money value and type.
 	public boolean equals(Money money){
 		if(this.dollars == money.dollars && this.cents == money.cents){
 			return true;
@@ -118,6 +128,7 @@ public class Money {
 		}
 	}
 
+	// toString() method.
 	public String toString(){
 		return "$" + dollars + "." + cents;
 	}
