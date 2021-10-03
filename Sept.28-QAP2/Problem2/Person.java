@@ -15,7 +15,7 @@ public class Person {
 		this.home = home;
 	}
 
-	// toString method()
+	// Print the Person object's last name, first name, and home address.
 	public String toString(){
 		return "Person[" + lastName + ", " + firstName + ", " + home + "]";
 	}
