@@ -4,24 +4,45 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class testRectangle {
+
     @Test
-    public static void main(String[] args) {
+    public void testGetLength(){
         Rectangle r1 = new Rectangle(10, 15);
-        System.out.println("The area of r1 is " + r1.getArea()
-                + "and the perimeter is " + r1.getPerimeter());
-
-        Assert.assertFalse(r1.getLength() != 10);
-        Assert.assertFalse(r1.getWidth() != 15);
-
-
-
-        Rectangle r2 = new Rectangle(7, 13);
-        System.out.println("The area of r2 is " + r2.getArea()
-                + " and the perimeter is " + r2.getPerimeter());
-
-        Assert.assertFalse(r2.getLength() != 7);
-        Assert.assertFalse(r2.getWidth() != 13);
-        Assert.assertTrue("Area should not be 100",r2.getArea() != 100);
-        Assert.assertFalse("r2.getArea() does not return 91 like expected",r2.getArea() != 91);
+        Assert.assertTrue(r1.getLength() == 10);
     }
+
+    @Test
+    public void testGetWidth(){
+        Rectangle r1 = new Rectangle(10, 15);
+        Assert.assertTrue(r1.getWidth() == 15);
+    }
+
+    @Test
+    public void testGetArea(){
+        Rectangle r2 = new Rectangle(50, 40);
+        Assert.assertTrue(r2.getArea() == 2000);
+    }
+
+    @Test
+    public void testGetPerimeter(){
+        Rectangle r2 = new Rectangle(50, 40);
+        Assert.assertTrue(r2.getPerimeter() == 180);
+    }
+
+    @Test
+    public void testSetLength(){
+        Rectangle r3 = new Rectangle(125, 75);
+        // Set length
+        r3.setLength(99);
+        Assert.assertTrue(r3.getLength() == 99);
+    }
+
+    @Test
+    public void testSetWidth(){
+        Rectangle r3 = new Rectangle(125, 75);
+        // Set width
+        r3.setWidth(150);
+        Assert.assertTrue(r3.getWidth() == 150);
+    }
+
 }
