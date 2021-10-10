@@ -14,7 +14,7 @@ public class CheckingAccount {
 		return balance;
 	}
 
-	public void transfer(Money amount){
+	public void transfer(SavingsAccount account, Money amount){
 		balance.subtract(amount);
 		if(balance.compareTo(amount) == -1){
 			balance.add(amount);
