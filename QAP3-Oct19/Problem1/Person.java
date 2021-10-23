@@ -2,12 +2,12 @@
 * This is the Person superclass.
 */
 
+
+
 public class Person {
 	protected String myName ;   // name of the person
 	protected int myAge;        // person’s age
 	protected String myGender;  // “M” for male, “F” for female
-	protected String subject; // Course subject student is taking
-	protected double salary; // Teacher's annual salary
 	
 	// Parameterized constructor
 	public Person(String name, int age, String gender)  {
