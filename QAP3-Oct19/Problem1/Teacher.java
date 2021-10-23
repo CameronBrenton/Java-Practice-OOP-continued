@@ -2,16 +2,14 @@
 * This is the Teacher subclass of Person.
 */
 
+
 public class Teacher extends Person{
 	protected String subject; // Course subject the teacher is taking
 	protected double salary; // Teacher's annual salary
 
 	public Teacher(String myName, int myAge, String myGender, String subject, double salary){
 		// Access the parent class variable's
-		super(name, age, gender);
-		name = myName;
-		age = myAge;
-		gender = myGender;
+		super(myName, myAge, myGender);
 		this.subject = subject;
 		this.salary = salary;
 	}
@@ -26,17 +24,17 @@ public class Teacher extends Person{
 	}
 
 	// Setters
-	public void setSubject(subject){
+	public void setSubject(String subject){
 		this.subject = subject;
 	}
 
-	public void setSalary(salary){
+	public void setSalary(String salary){
 		this.salary = salary;
 	}
 
 	// Describe itself
 	public String toString(){
-		return super.toString() + ", subject" + subject + ", salary" + salary;
+		return super.toString() + ", subject: " + subject + ", salary: " + salary;
 	}
 	
 	
