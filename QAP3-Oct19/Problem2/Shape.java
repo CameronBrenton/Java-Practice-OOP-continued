@@ -40,6 +40,6 @@ public class Shape {
 
 	// Description
 	public String toString(){
-		return "This Shape has the color=" + color + ", filled=" + filled;
+		return "A Shape with color of " + color + " and filled/Not filled: " + filled;
 	}
 }
