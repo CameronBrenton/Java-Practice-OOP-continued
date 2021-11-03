@@ -3,6 +3,8 @@ package com.key.employee;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Objects;
+
 public class testEmployee {
 
     @Test
@@ -27,7 +29,7 @@ public class testEmployee {
     @Test
     public void testGetName(){
         Employee employee4 = new Employee(04, "Stan", "Nowlin", 4300);
-        Assert.assertTrue(employee4.getName() == "Stan Nowlin");
+        Assert.assertTrue(Objects.equals(employee4.getName(), "Stan Nowlin"));
     }
 
     @Test

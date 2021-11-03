@@ -13,7 +13,7 @@ public class Money {
 		cents = (long)((amount - dollars) * 100);
 	}
 
-	// Money Copy Constructor
+	// Money Overloaded/Copy Constructor
 	public Money(Money money){
 		dollars = money.dollars;
 		cents = money.cents;
@@ -35,7 +35,7 @@ public class Money {
 		this.dollars -= money.dollars;
 		this.cents -= money.cents;
 		if(this.cents < 0){
-			this.dollars -=1;
+			this.dollars -= 1;
 			this.cents = this.cents + 100;
 		}
 	}

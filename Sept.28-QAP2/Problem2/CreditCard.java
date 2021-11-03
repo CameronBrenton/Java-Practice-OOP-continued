@@ -8,7 +8,7 @@ public class CreditCard {
 	private Money balance;
 	private Money creditLimit;
 
-	//CreditCard parameterized constructor
+	//CreditCard Overloaded/copy constructor
 	public CreditCard(Person newCardHolder, Money limit){
 		balance = new Money(0);
 		creditLimit = new Money(0);

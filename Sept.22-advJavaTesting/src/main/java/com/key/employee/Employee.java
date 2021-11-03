@@ -15,6 +15,7 @@ public class Employee {
         count++;
     }
 
+    // Copy constructor
     public Employee(Employee e) {
         this.id = e.id;
         this.firstName = e.firstName;
